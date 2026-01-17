@@ -41,22 +41,25 @@ export default function Hero() {
                 </motion.p>
 
                 {/* Action Area */}
-                <motion.div
+                <motion.form
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto"
+                    action="https://formspree.io/f/mzdddonl"
+                    method="POST"
                 >
                     <input
                         type="email"
+                        name="email"
                         placeholder="Enter your college email"
                         className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                     />
-                    <button className="w-full md:w-auto px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group">
+                    <button type="submit" className="w-full md:w-auto px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 group">
                         <span>Join Waitlist</span>
                         <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </button>
-                </motion.div>
+                </motion.form>
             </div>
         </section>
     );
